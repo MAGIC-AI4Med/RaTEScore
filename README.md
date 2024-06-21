@@ -45,6 +45,8 @@ pred_report = ['There are no intracranial hemorrhages.',
 gt_report = ['There is no finding to suggest intracranial hemorrhage.',
             'The muscle compartments are intact.']
 
+assert len(pred_report) == len(gt_report)
+
 ratescore = RaTEScore()
 scores = ratescore.compute_score(pred_report, gt_report)
 ```
