@@ -1,6 +1,6 @@
 <p style="text-align: center; width: 20%;">
     <a target="_blank">
-        <img src="figure/logo.png" alt="logo" style="width: 15%; min-width: 75px; display: block; margin-left: 0;">
+        <img src="figure/logo.png" alt="logo" style="width: 15%; min-width: 75px; display: block; margin-left: auto;">
     </a>
 </p>
 
