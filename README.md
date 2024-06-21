@@ -1,4 +1,4 @@
-<h1><img src="figure/logo.png" alt="logo" style="height:50px; vertical-align: middle;margin-bottom: -10px;"> RaTEScore</h1>
+<h1><img src="figure/logo.png" alt="logo" style="height:65px; vertical-align: middle;margin-bottom: -10px;"> RaTEScore</h1>
 
 
 RaTEScore: A Metric for Entity-Aware Radiology Text Similarity
