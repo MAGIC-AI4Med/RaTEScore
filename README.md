@@ -65,9 +65,9 @@ To download or find out more about our dataset, please refer to [Hugginface](htt
 
 ## Default Scheme
 
-For **Medical Entity Recognition module**, we default to use our fine-tuned version of DeBERTa on the RaTE-NER dataset. It is based on whole the IOB scheme. 
+For **Medical Entity Recognition module**, we default to use our [NER model](https://huggingface.co/Angelakeke/RaTE-NER-Deberta) which is fine-tuned version of DeBERTa on the [RaTE-NER](https://huggingface.co/datasets/Angelakeke/RaTE-NER) dataset. It is based on whole the IOB scheme. 
 
-For **Synonym Disambiguation Encoding module**, we default to ultilize [BioLORD-2023-C](https://huggingface.co/FremyCompany/BioLORD-2023-C). We have discussed this part in our paper. You can also change this to other pretrained bert models.
+For **Synonym Disambiguation Encoding module**, we default to utilize [BioLORD-2023-C](https://huggingface.co/FremyCompany/BioLORD-2023-C). We have discussed this part in our paper. You can also change this to other pretrained bert models.
 
 ## Contact
 If you have any questions, please feel free to contact zwk0629@sjtu.edu.cn.
