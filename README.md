@@ -1,4 +1,4 @@
-<div style="text-align: center; width: 20%;">
+<div style="align: center; width: 20%;">
         <img src="figure/logo.png" alt="logo" style="width: 15%; display: block; margin-left: auto; margin-right: auto;">
 </div>
 
