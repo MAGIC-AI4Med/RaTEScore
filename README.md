@@ -8,7 +8,7 @@ RaTEScore: A Metric for Radiology Report Generation
 <a href='https://huggingface.co/Angelakeke/RaTE-NER'><img src='https://img.shields.io/badge/RaTENER-Model&Demo-blue'></a>
 <a href='https://huggingface.co/datasets/Angelakeke/RaTE-NER'><img src='https://img.shields.io/badge/RaTENER-Dataset-blue'></a>
 <a href='https://huggingface.co/datasets/Angelakeke/RaTE-Eval'><img src='https://img.shields.io/badge/RaTEEval-Benchmark-green'></a> 
-<a href=''><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<a href='https://arxiv.org/pdf/2406.16845'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
 </div>
 
 ## Overview
@@ -20,7 +20,7 @@ Here is an illustration of the Computation of RaTEScore.
 
 ![](./figure/model.png)
 
-For more detailed about our pipeline, please refer to our paper.
+For more detailed about our pipeline, please refer to our [paper](https://arxiv.org/pdf/2406.16845).
 
 ## Installation
 
@@ -48,7 +48,7 @@ scores = ratescore.compute_score(pred_report, gt_report)
 
 ## RaTE-NER
 
- RaTE-NER dataset is a large-scale, radiological named entity recognition (NER) dataset. We set up this dataset to serve our Medical Entity Recognition module of our proposed metric. To download or find out more about our dataset, please refer to [Hugginface](https://huggingface.co/datasets/Angelakeke/RaTE-NER) and our [paper]().
+ RaTE-NER dataset is a large-scale, radiological named entity recognition (NER) dataset. We set up this dataset to serve our Medical Entity Recognition module of our proposed metric. To download or find out more about our dataset, please refer to [Hugginface](https://huggingface.co/datasets/Angelakeke/RaTE-NER) and our [paper](https://arxiv.org/pdf/2406.16845).
 
 ## RaTE-Eval
 
@@ -58,7 +58,7 @@ To effectively measure the alignment between automatic evaluation metrics and ra
 - Paragraph-level Human Rating.
 - Rating on the Synthetic Reports.
 
-To download or find out more about our dataset, please refer to [Hugginface](https://huggingface.co/datasets/Angelakeke/RaTE-Eval) and our [paper]().
+To download or find out more about our dataset, please refer to [Hugginface](https://huggingface.co/datasets/Angelakeke/RaTE-Eval) and our [paper](https://arxiv.org/pdf/2406.16845).
 
 ## Default Scheme
 
