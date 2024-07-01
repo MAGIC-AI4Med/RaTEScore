@@ -43,6 +43,9 @@ gt_report = ['There is no finding to suggest intracranial hemorrhage.',
 assert len(pred_report) == len(gt_report)
 
 ratescore = RaTEScore()
+# Add visualization_path here if you want to save the visualization result
+# ratescore = RaTEScore(visualization_path = '')
+
 scores = ratescore.compute_score(pred_report, gt_report)
 ```
 
