@@ -70,6 +70,11 @@ For **Synonym Disambiguation Encoding module**, we default to utilize [BioLORD-2
 If you have any questions, please feel free to contact zwk0629@sjtu.edu.cn.
 
 ## Citation
-```
-
+```bibtex
+@article{zhao2024ratescore,
+  title={RaTEScore: A Metric for Radiology Report Generation},
+  author={Zhao, Weike and Wu, Chaoyi and Zhang, Xiaoman and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
+  journal={arXiv preprint arXiv:2406.16845},
+  year={2024}
+}
 ```
