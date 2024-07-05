@@ -1,8 +1,8 @@
 import torch
 import json
-import numpy as np
 from transformers import AutoConfig, AutoModel, AutoTokenizer, AutoModelForTokenClassification
 import pandas as pd
+import os
 
 from .score import run_ner, process_embedding
 from .utils import compute
@@ -63,8 +63,14 @@ class RaTEScore:
         self.idx2label = self.config.id2label
         
         # save the input
-        self.visualization_path = visualization_path
         self.batch_size = batch_size
+        
+        if visualization_path:
+            self.visualization_path = visualization_path
+            if not os.path.exists(os.path.dirname(visualization_path)):
+                os.makedirs(os.path.dirname(visualization_path))
+        else:
+            self.visualization_path = None
         
         
     def compute_score(self, candidate_list, reference_list):
@@ -101,14 +107,26 @@ class RaTEScore:
             pred_embeds_word, pred_types = process_embedding(pred_pair, self.eval_tokenizer, self.eval_model, self.device)
             
             # compute the score
-            rate_score.append(compute(gt_embeds_word, pred_embeds_word, gt_types, pred_types, self.affinity_matrix))
+            if len(gt_embeds_word) == 0 or len(pred_embeds_word) == 0:
+                rate_score.append(0)
+                continue
+            
+            precision_score = compute(gt_embeds_word, pred_embeds_word, gt_types, pred_types, self.affinity_matrix)
+            recall_score = compute(pred_embeds_word, gt_embeds_word, pred_types, gt_types, self.affinity_matrix)
+            
+            if precision_score + recall_score == 0:
+                rate_score.append(0)
+            else:  
+                rate_score.append(2*precision_score*recall_score/(precision_score+recall_score))
             
         if self.visualization_path:
             save_file = pd.DataFrame({
                 'candidate': candidate_list,
                 'reference': reference_list,
+                'candidate_entities': pred_pairs,
+                'reference_entities': gt_pairs,
                 'rate_score': rate_score
             })
-            save_file.to_json(self.visualization_path)
+            save_file.to_json(os.path.join(self.visualization_path, 'rate_score.json'), lines=True, orient='records')
                 
         return rate_score
