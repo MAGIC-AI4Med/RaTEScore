@@ -9,6 +9,7 @@ RaTEScore: A Metric for Radiology Report Generation
 <a href='https://huggingface.co/datasets/Angelakeke/RaTE-NER'><img src='https://img.shields.io/badge/RaTENER-Dataset-blue'></a>
 <a href='https://huggingface.co/datasets/Angelakeke/RaTE-Eval'><img src='https://img.shields.io/badge/RaTEEval-Benchmark-green'></a> 
 <a href='https://arxiv.org/pdf/2406.16845'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<a href='https://pepy.tech/project/RaTEScore'><img src='https://static.pepy.tech/badge/RaTEScore'></a>
 </div>
 
 ## Overview
