@@ -1,7 +1,7 @@
 <h1><img src="figure/logo.png" alt="logo" style="height:65px; vertical-align: middle;margin-bottom: -10px;"> RaTEScore</h1>
 
 
-RaTEScore: A Metric for Radiology Report Generation
+[EMNLP 2024] RaTEScore: A Metric for Radiology Report Generation
 
 <div style='display:flex; gap: 0.25rem; '>
 <a href='https://angelakeke.github.io/RaTEScore/'><img src='https://img.shields.io/badge/website-URL-blueviolet'></a>
