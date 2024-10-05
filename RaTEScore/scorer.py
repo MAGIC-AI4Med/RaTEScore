@@ -1,5 +1,6 @@
 import torch
 import json
+import numpy as np
 from transformers import AutoConfig, AutoModel, AutoTokenizer, AutoModelForTokenClassification
 import pandas as pd
 import os
@@ -106,14 +107,14 @@ class RaTEScore:
             # process the embedding for pred
             pred_embeds_word, pred_types = process_embedding(pred_pair, self.eval_tokenizer, self.eval_model, self.device)
             
-            # compute the score
+            # compute the score, if the length of gt or pred is 0, the score is 0.5
             if len(gt_embeds_word) == 0 or len(pred_embeds_word) == 0:
-                rate_score.append(0)
-                continue
-            
+                rate_score.append(0.5)
+                continue 
+
             precision_score = compute(gt_embeds_word, pred_embeds_word, gt_types, pred_types, self.affinity_matrix)
             recall_score = compute(pred_embeds_word, gt_embeds_word, pred_types, gt_types, self.affinity_matrix)
-            
+
             if precision_score + recall_score == 0:
                 rate_score.append(0)
             else:  
