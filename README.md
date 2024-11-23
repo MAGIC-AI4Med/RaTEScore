@@ -8,7 +8,7 @@
 <a href='https://huggingface.co/Angelakeke/RaTE-NER'><img src='https://img.shields.io/badge/RaTENER-Model&Demo-blue'></a>
 <a href='https://huggingface.co/datasets/Angelakeke/RaTE-NER'><img src='https://img.shields.io/badge/RaTENER-Dataset-blue'></a>
 <a href='https://huggingface.co/datasets/Angelakeke/RaTE-Eval'><img src='https://img.shields.io/badge/RaTEEval-Benchmark-green'></a> 
-<a href='https://arxiv.org/pdf/2406.16845'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<a href='https://aclanthology.org/2024.emnlp-main.836.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
 <a href='https://pepy.tech/project/RaTEScore'><img src='https://static.pepy.tech/badge/RaTEScore'></a>
 </div>
 
@@ -20,7 +20,7 @@ Here is an illustration of the Computation of RaTEScore.
 
 ![](./figure/model.png)
 
-For more detailed about our pipeline, please refer to our [paper](https://arxiv.org/pdf/2406.16845).
+For more detailed about our pipeline, please refer to our [paper](https://aclanthology.org/2024.emnlp-main.836.pdf).
 
 ## Installation
 
@@ -53,7 +53,7 @@ scores = ratescore.compute_score(pred_report, gt_report)
 
 ## RaTE-NER
 
- RaTE-NER dataset is a large-scale, radiological named entity recognition (NER) dataset. We set up this dataset to serve our Medical Entity Recognition module of our proposed metric. To download or find out more about our dataset, please refer to [Hugginface](https://huggingface.co/datasets/Angelakeke/RaTE-NER) and our [paper](https://arxiv.org/pdf/2406.16845).
+ RaTE-NER dataset is a large-scale, radiological named entity recognition (NER) dataset. We set up this dataset to serve our Medical Entity Recognition module of our proposed metric. To download or find out more about our dataset, please refer to [Hugginface](https://huggingface.co/datasets/Angelakeke/RaTE-NER) and our [paper](https://aclanthology.org/2024.emnlp-main.836.pdf).
 
 ## RaTE-Eval
 
@@ -76,10 +76,11 @@ If you have any questions, please feel free to contact zwk0629@sjtu.edu.cn.
 
 ## Citation
 ```bibtex
-@article{zhao2024ratescore,
+@inproceedings{zhao2024ratescore,
   title={RaTEScore: A Metric for Radiology Report Generation},
   author={Zhao, Weike and Wu, Chaoyi and Zhang, Xiaoman and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
-  journal={arXiv preprint arXiv:2406.16845},
+  booktitle={Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages={15004--15019},
   year={2024}
 }
 ```
