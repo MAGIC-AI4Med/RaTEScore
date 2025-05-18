@@ -46,7 +46,7 @@ assert len(pred_report) == len(gt_report)
 
 ratescore = RaTEScore()
 # Add visualization_path here if you want to save the visualization result
-# ratescore = RaTEScore(visualization_path = '')
+# ratescore = RaTEScore(visualization_path = '', , affinity_matrix='short') # affinity_matrix='long' for long paragraph evaluation
 
 scores = ratescore.compute_score(pred_report, gt_report)
 ```
