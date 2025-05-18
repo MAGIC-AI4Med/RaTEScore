@@ -116,7 +116,7 @@ def compute(gt_embeds_word, pred_embeds_word, gt_types, pred_types, weight_matri
                 ('NON-ABNORMALITY', 'DISEASE'),
                 ('DISEASE', 'NON-ABNORMALITY'),
                 ('ABNORMALITY', 'NON-DISEASE'),]
-    neg_weight = 0.3612
+    neg_weight = weight_matrix[("NEG", "WEIGHT")]
     topk_indices, topk_values = topk_similarity(gt_embeds_word, pred_embeds_word, k=1)   
 
     
